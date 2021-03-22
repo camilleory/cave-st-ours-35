@@ -1,0 +1,116 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+// $theme-colors: (
+//   primary: #525ddc,
+// );
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$font-size: 10px;
+
+// colors
+
+// spacing
+
+$xxs: 330px;
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+$xl: 1600px;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25,
+  ),
+  2: (
+    $spacer * 0.5,
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 2,
+  ),
+  5: (
+    $spacer * 2.5,
+  ),
+  6: (
+    $spacer * 3,
+  ),
+  7: (
+    $spacer * 3.5,
+  ),
+  8: (
+    $spacer * 4,
+  ),
+  9: (
+    $spacer * 4.5,
+  ),
+  10: (
+    $spacer * 5,
+  ),
+  11: (
+    $spacer * 5.5,
+  ),
+  12: (
+    $spacer * 6,
+  ),
+  13: (
+    $spacer * 6.5,
+  ),
+  14: (
+    $spacer * 7,
+  ),
+  15: (
+    $spacer * 7.5,
+  ),
+  16: (
+    $spacer * 8,
+  ),
+  17: (
+    $spacer * 8.5,
+  ),
+  18: (
+    $spacer * 9,
+  ),
+  19: (
+    $spacer * 9.5,
+  ),
+  20: (
+    $spacer * 10,
+  ),
+  21: (
+    $spacer * 10.5,
+  ),
+  22: (
+    $spacer * 11,
+  ),
+  23: (
+    $spacer * 11.5,
+  ),
+  24: (
+    $spacer * 12,
+  ),
+  25: (
+    $spacer * 12.5,
+  ),
+  26: (
+    $spacer * 13,
+  ),
+  27: (
+    $spacer * 13.5,
+  ),
+  28: (
+    $spacer * 14,
+  ),
+  29: (
+    $spacer * 14.5,
+  ),
+  30: (
+    $spacer * 15,
+  ),
+);

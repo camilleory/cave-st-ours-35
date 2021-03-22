@@ -1,0 +1,50 @@
+#commande {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .commande-wrapper {
+    max-width: $xl;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    p {
+      width: 60%;
+
+      @media (max-width: $md) {
+        width: 80%;
+      }
+    }
+
+    a {
+      width: fit-content;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 8px;
+      margin-top: 3rem;
+      // transition: font-size ease 0.5s;
+
+      &:hover {
+        opacity: 0.9;
+        text-decoration: none;
+        // border: 1px solid white;
+        // font-size: 1.8rem;
+      }
+
+      img {
+        width: 2rem;
+        /* stylelint-disable */
+        filter: invert(26%) sepia(83%) saturate(1518%) hue-rotate(352deg)
+          brightness(91%) contrast(90%);
+      }
+    }
+  }
+}
