@@ -34,16 +34,30 @@ $commande = get_field('informations_commande');
 @endphp
 
 @foreach($vins_description as $index => $el)
-    <div @if ($index % 2 == 0) class="family-box" @else class="family-box reverse" @endif>
-        <div class="family-content">
-            <h3>{!!$el->post_title!!}</h3>
+    <div class="family-box reverse vin-wrapper">
+        <div class="family-content text-left">
+            <h3 class="text-center">{!!$el->post_title!!}</h3>
+            
             {!! apply_filters('the_content',$el->post_content) !!}
-            Prix: {!!get_field('prix', $el->ID)!!}
+            <div class="vins-prix d-flex">
+                <strong>
+                    <span >75cl</span>
+                    <span class="px-1 px-lg-3">|</span>
+                    <span >Prix: {!!get_field('prix', $el->ID)!!}</span>
+                    <span class="px-1 px-lg-3">|</span>
+                    <a style="color: {{$color}}" href="{{get_the_permalink(19)}}">Commander</a>
+                </strong>
+            </div>
+          
+        
         </div>
         <div class="family-img vin-img">
-            <img src="{!!get_the_post_thumbnail_url($el->ID)!!}" alt="">
+            <img data-lightense-offset="-500" class="vin-img-img" src="{!!get_the_post_thumbnail_url($el->ID)!!}" alt="">
         </div>
     </div>
 @endforeach
+
+
+
 
 @include('partials/commande')

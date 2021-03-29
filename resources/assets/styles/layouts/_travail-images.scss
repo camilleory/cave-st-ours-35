@@ -29,11 +29,11 @@
       object-fit: cover;
       padding: 1rem;
       border-radius: 15%;
-      opacity: 0.5;
+      opacity: 1;
 
-      &:hover {
-        opacity: 1;
-      }
+      // &:hover {
+      //   opacity: 1;
+      // }
 
       @media (max-width: $md) {
         padding: 0.5rem;

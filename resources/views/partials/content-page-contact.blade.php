@@ -25,13 +25,11 @@
         <div class="header-icon">
             <img src="@asset("images/oiseaux.jpg")">
         </div>		
-		<div class="header-text">
+		{{-- <div class="header-text">
         	{!! apply_filters('the_content', $contact->post_content) !!}
-			<p><strong>Paiement</strong></p>
-			<p>{!!get_field('paiement')!!}</p>
-			<p><strong>Réception de votre commande</strong></p>
-			<p>{{get_field('reception_de_votre_commande')}}</p>
-		</div>
+			<p><strong>Paiement</strong><br>{!!get_field('paiement')!!}</p>
+			<p><strong>Réception de votre commande</strong><br>{{get_field('reception_de_votre_commande')}}</p>
+		</div> --}}
     </div>
 
 </section>
@@ -62,30 +60,23 @@ if(isset($_POST['submitted'])) {
 
     $telephone = trim($_POST['telephone']);
 	$adresse = trim($_POST['adresse']);
-
+	$prevention = trim($_POST['prevention']);
 
 	$wine_quantity = "";
 	foreach ($vins_description as $index => $el) {
     	$wine_quantity = $wine_quantity . $el->post_name . ":  " . trim($_POST[$el->post_name]) . "\n\n";
 	}
 
-    // $number2 = trim($_POST['number2']);
-    // $number3 = trim($_POST['number3']);
-    // $number4 = trim($_POST['number4']);
-
     $comments = trim($_POST['comments']);
 
 	
-	// Gamay vieille vigne: $number1 \n\nFendant: $number2 \n\nSyrah: $number3 \n\nPetite Arvine: $number4 
+	// if (empty($prevention)) {
+	// 	echo 'send form';
+	// } else {
+	// 	 echo 'dont send form';
+	// }
 
-	
-
-
-// foreach ($vins_description as $index => $el) {
-// 		echo "\n\n" . $el->post_title . ":  " . $el->post_name;
-// 	};
-
-	if(!isset($hasError)) {
+	if(!isset($hasError) && empty($prevention)) {
 		$emailTo = get_option('tz_email');
 		if (!isset($emailTo) || ($emailTo == '') ){
 			$emailTo = get_option('admin_email');
@@ -114,6 +105,11 @@ if(isset($_POST['submitted'])) {
 								</p>
 							</div>
 						<?php } else { ?>
+							<div class="header-text d-flex flex-column text-center mb-6">
+								{!! apply_filters('the_content', $contact->post_content) !!}
+								<p class="mt-3"><strong>Paiement</strong><br>{!!get_field('paiement')!!}</p>
+								<p class="mt-3"><strong>Réception de votre commande</strong><br>{{get_field('reception_de_votre_commande')}}</p>
+							</div>
 							<?php ?>
 							<?php if(isset($hasError) || isset($captchaError)) { ?>
 								<p class="error">Une erreur s'est produite, veuiller réessayer.<p>
@@ -122,6 +118,9 @@ if(isset($_POST['submitted'])) {
 						<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
 							<ul class="contactform">
 
+								{{-- Preventing bots input --}}
+								<input type="text" style ="display: none" name="prevention" id="prevention" value="<?php if(isset($_POST['prevention'])) echo $_POST['prevention'];?>"/>
+								
 								{{-- Coordonnées --}}
 								<p>Coordonnées</p>
 							<li style="background-color: {{$color}}">
@@ -167,7 +166,7 @@ if(isset($_POST['submitted'])) {
 									<div class="mb-3">
 										<label class="wine-label" for={!!$el->post_name!!}>{!!$el->post_title!!}</label>
 										<p class="commande-prix">{!!get_field('prix', $el->ID)!!}</p>
-										<input  class="wine-input" style="background-color: {{$color}}" type="number" name="{!!$el->post_name!!}" id="{!!$el->post_name!!}" class=""<?php if(isset($_POST['{!!$el->post_name!!}'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['{!!$el->post_name!!}']); } else { echo $_POST['{!!$el->post_name!!}']; } } ?>/>
+										<input  class="wine-input" style="background-color: {{$color}}" type="number" placeholder="0" name="{!!$el->post_name!!}" id="{!!$el->post_name!!}" class=""<?php if(isset($_POST['{!!$el->post_name!!}'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['{!!$el->post_name!!}']); } else { echo $_POST['{!!$el->post_name!!}']; } } ?>/>
 									</div>
 									<?php if($commentError != '') { ?>
 										<span class="error"><?=$commentError;?></span>

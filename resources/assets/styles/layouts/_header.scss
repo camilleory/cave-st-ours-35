@@ -1,16 +1,14 @@
 header {
   .navbar {
-    @media (max-width: $sm) {
-      padding: 0;
-    }
+    padding: 0;
 
     button {
-      &:focus {
-        outline: none !important;
-      }
-
       &:hover {
         opacity: 1;
+      }
+
+      &:focus {
+        outline: none;
       }
 
       .hamburger-inner {
@@ -33,6 +31,15 @@ header {
       color: black;
       margin-left: 2rem;
 
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
+
+      // &:focus {
+      //   outline: 10px solid white;
+      // }
+
       @media (max-width: $lg) {
         margin-left: 0;
       }
@@ -41,48 +48,31 @@ header {
         font-size: 2.5rem;
         padding: 2rem;
       }
+    }
 
-      &.brand {
-        padding: 0;
-      }
+    .brand {
+      width: 9rem;
+      padding: 0;
 
-      &:focus {
-        outline: none;
+      .brand-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
 
     .navbar-nav {
       align-items: center;
       height: auto;
-      transition: height ease-in 1s,;
+      transition: height ease-in 1s;
 
       @media (max-width: $md) {
-        // padding-bottom: 3rem;
         height: 70vh;
-      }
-
-      &:focus {
-        outline: none;
       }
 
       &.disapear {
         height: 0;
       }
-    }
-
-    .nav-link {
-      &:hover {
-        text-decoration: none;
-        color: black;
-      }
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    img {
-      width: 90px;
     }
 
     // Animation Links
@@ -92,13 +82,8 @@ header {
       height: 20px;
       stroke: transparent;
       position: absolute;
-      // left: 20px;
       bottom: -5px;
       stroke-width: 2;
-
-      &:focus {
-        outline: none;
-      }
 
       &:nth-child(2) {
         stroke-dasharray: 650px;
@@ -126,18 +111,12 @@ header {
       }
     }
 
-    &:focus {
-      outline: none;
-    }
+    // &:focus {
+    //   outline: 1px solid white;
+    // }
   }
 }
 
 #stroke {
   display: none;
-}
-
-.nav-item {
-  &:focus {
-    outline: none;
-  }
 }

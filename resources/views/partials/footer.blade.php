@@ -21,10 +21,10 @@ $footer = get_post(88);
         {!! apply_filters('the_content', $footer->post_content) !!}
       </div>
       <div class="flex-column justify-content-end copy-right-container">
-        <a href="{{get_the_permalink(3)}}">Impressum <br>Confidentialité</a>
+        <a href="{{get_the_permalink(3)}}">Impressum | Confidentialité</a>
         <p>© Site web: Camille Ory</p>
         <p>© Logo et illustrations: Régine Bourgeois</p>
-        <p>© Photos: Jessica Amar & Thomas Masotti</p>
+        <p>© Photos: Aline Fournier,<br>Jessica Amar & Thomas Masotti</p>
       </div>
     </div>
   </div>

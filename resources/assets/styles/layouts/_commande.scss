@@ -70,6 +70,10 @@
             margin-top: 0.5rem;
           }
         }
+
+        ::placeholder {
+          color: white;
+        }
       }
     }
 

@@ -48,3 +48,24 @@
     }
   }
 }
+
+.vin-wrapper {
+  max-width: $lg;
+
+  .vins-prix {
+    width: 50%;
+    justify-content: center;
+
+    @media (max-width: $md) {
+      width: 65%;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import SimpleLightbox from 'simplelightbox';
+import Lightense from 'lightense-images';
 
 export default {
   init() {
@@ -24,6 +25,28 @@ export default {
       });
       console.log(gallery)
     }
+
+  //  let elements = $('.vin-img-img')
+
+    // Lightense({
+    //   time: 300,
+    //   padding: 40,
+    //   offset: 40,
+    //   keyboard: true,
+    //   cubicBezier: 'cubic-bezier(.2, 0, .1, 1)',
+    //   background: 'rgba(255, 255, 255, .98)',
+    //   zIndex: 2147483647,
+    // });
+
+  
+
+    window.addEventListener('load', function () {
+      Lightense('.vin-img-img');
+    }, false);
+
+    $('.vin-img-img').on('click', function () {
+      $('.vin-img').toggleClass('zoom')
+    })
 
     function toggleNavbar () {
       // console.log('click')

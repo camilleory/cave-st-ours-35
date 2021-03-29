@@ -11,16 +11,13 @@ $color=get_field('color');
 <header class="banner">
   <div class="container">
     <nav class="navbar navbar-expand-lg">
-      <a class="brand" href="{{ home_url('/') }}"><img src="@asset('images/logo.jpg')"></a>
-      {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> --}}
-        {{-- <span class="navbar-toggler-icon"> --}}
-          <button class="navbar-toggler hamburger hamburger--spin" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-        {{-- </span> --}}
-      {{-- </button> --}}
+      <a class="brand" href="{{ home_url('/') }}"><img class="brand-img" src="@asset('images/logo.png')"></a>
+      <button class="navbar-toggler hamburger hamburger--spin" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
 
