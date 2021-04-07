@@ -37,7 +37,7 @@
     </div> --}}
 </section>
 <section id="news" class="d-flex flex-column pt-5 pt-lg-15">
-    <h2 class="align-self-center pb-10">News</h2>
+    <h2 class="news-title align-self-center pb-5 pb-md-10">News</h2>
     @foreach($posts as $index => $el)
         <div class="news-box first-news">
             <div class="family-content">

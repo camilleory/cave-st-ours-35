@@ -106,9 +106,9 @@ if(isset($_POST['submitted'])) {
 							</div>
 						<?php } else { ?>
 							<div class="header-text d-flex flex-column text-center mb-6">
-								{!! apply_filters('the_content', $contact->post_content) !!}
-								<p class="mt-3"><strong>Paiement</strong><br>{!!get_field('paiement')!!}</p>
+								{!! apply_filters('the_content', $contact->post_content) !!}	
 								<p class="mt-3"><strong>Réception de votre commande</strong><br>{{get_field('reception_de_votre_commande')}}</p>
+								<p class="mt-3"><strong>Paiement</strong><br>{!!get_field('paiement')!!}</p>
 							</div>
 							<?php ?>
 							<?php if(isset($hasError) || isset($captchaError)) { ?>

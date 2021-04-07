@@ -22,9 +22,9 @@ $footer = get_post(88);
       </div>
       <div class="flex-column justify-content-end copy-right-container">
         <a href="{{get_the_permalink(3)}}">Impressum | Confidentialité</a>
-        <p>© Site web: Camille Ory</p>
-        <p>© Logo et illustrations: Régine Bourgeois</p>
-        <p>© Photos: Aline Fournier,<br>Jessica Amar & Thomas Masotti</p>
+        <p>© Site web: <a href="mailto:contact@camille-ory.com">camille-ory</a></p>
+        <p>© Logo et illustrations: <a href="https://www.instagram.com/regine_dessine/" target="_blank">régine_dessine</a></p>
+        <p>© Photos: Aline Fournier,<br>Jessica Maroni & Thomas Masotti</p>
       </div>
     </div>
   </div>

@@ -27,16 +27,16 @@ body {
   .navbar-nav,
   .nav-link {
     &:focus {
-      outline: 1px solid white;
+      outline: 1px solid transparent;
     }
 
     &:active {
-      outline: 1px solid white;
+      outline: 1px solid transparent;
     }
   }
 
   .nav-itm:focus {
-    outline: 1px solid white;
+    outline: 1px solid transparent;
   }
 
   @media (max-width: $md) {
@@ -219,7 +219,7 @@ body {
 
     h3 {
       padding-bottom: 1rem;
-      
+
       @media (max-width: $sm) {
         font-weight: bold;
       }
@@ -258,6 +258,10 @@ body {
       height: 30rem;
       max-height: 30rem;
       border-radius: 0px;
+
+      &.vin-img {
+        margin-bottom: 1rem;
+      }
     }
 
     img {

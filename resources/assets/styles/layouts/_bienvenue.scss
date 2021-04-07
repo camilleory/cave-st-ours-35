@@ -4,6 +4,12 @@
   }
 }
 
+.news-title {
+  @media (max-width: $md) {
+    font-size: 2.7rem;
+  }
+}
+
 .hide-news {
   img {
     transform: scaleX(-1);
