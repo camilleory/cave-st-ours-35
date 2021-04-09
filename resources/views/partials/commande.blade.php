@@ -15,3 +15,5 @@ $color = get_field('color');
        <a style="color:{{$color}}" href={{get_the_permalink(19)}}><img class="commande-arrow mr-2" src="@asset("images/right.png")" alt="">Formulaire</a>
    </div>
 </section>
+
+{{-- test commit --}}
